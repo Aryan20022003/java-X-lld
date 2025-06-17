@@ -1,0 +1,29 @@
+Problem 1.1: Online Shopping Cart
+Scenario: Design a simplified online shopping cart system.
+
+Requirements:
+
+Create classes for Product (with attributes like id, name, price), and ShoppingCart.
+The ShoppingCart should be able to:
+Add products.
+Remove products.
+Calculate the total price of items in the cart.
+Display the items currently in the cart.
+OOP Concepts to Apply: Encapsulation, Basic Class Design, Methods.
+LLD Considerations: Think about how data is stored and accessed within your classes.
+
+Problem 1.2: Simple ATM Simulation
+Scenario: Simulate a basic ATM (Automated Teller Machine).
+Requirements:
+
+Create a BankAccount class with attributes like accountNumber, accountHolderName, and balance.
+Implement methods for:
+deposit(amount)
+withdraw(amount) (consider insufficient funds)
+getBalance()
+Create an ATM class that interacts with a BankAccount. The ATM should have methods like:
+checkBalance()
+depositMoney()
+withdrawMoney()
+OOP Concepts to Apply: Encapsulation, Class Interaction, Basic Error Handling.
+LLD Considerations: How do the ATM and BankAccount objects communicate?
