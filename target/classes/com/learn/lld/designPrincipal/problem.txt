@@ -1,0 +1,41 @@
+#Level 1: Basic E-commerce Order Processing
+Problem Statement:
+
+You need to design a system for processing customer orders in a basic e-commerce application. The system should be able to:
+
+Calculate the total price of an order, considering individual item prices and quantities.
+Apply a discount to the order if a coupon code is provided. There are two types of discounts: percentage-based and fixed-amount.
+Process the payment for the order. Initially, only credit card payments are supported.
+Generate a simple order confirmation message.
+Design Considerations & Principles to Focus On (Level 1):
+
+Single Responsibility Principle (SRP): Identify distinct responsibilities and encapsulate them within separate classes. For example, calculating price, applying discounts, and processing payments are distinct.
+Open/Closed Principle (OCP): Design the system so that new discount types (e.g., "buy one get one free") or payment methods (e.g., PayPal) can be added without modifying existing core classes.
+Dependency Inversion Principle (DIP): Depend on abstractions, not concretions. Think about how payment processing or discount application can be made flexible.
+KISS Principle (Keep It Simple, Stupid): Start with the simplest possible design that meets the requirements. Avoid over-engineering for future, uncertain needs.
+YAGNI Principle (You Ain't Gonna Need It): Don't implement features or complexity that aren't explicitly required by the problem statement. For example, don't build a full-fledged inventory management system yet.
+Deliverables (Level 1):
+
+Java code implementing the order processing system.
+A brief README/explanation justifying your design choices, specifically highlighting how you applied SRP, OCP, DIP, KISS, and YAGNI.
+
+
+#Level 2: Extending E-commerce with Notification and Shipping
+Problem Statement:
+
+Building upon your Level 1 solution, the e-commerce system needs to be extended to handle:
+
+Order Notifications: After an order is processed, send notifications to the customer. Initially, support email notifications. The system should be easily extensible to support SMS or push notifications later.
+Shipping Cost Calculation: Calculate shipping costs based on the order's total weight. Different shipping carriers might have different pricing models (e.g., flat rate, per-kg rate). Initially, only one carrier (Standard Shipping) is available with a simple per-kg rate.
+Order Status Management: Introduce different states for an order (e.g., PENDING, PROCESSING, SHIPPED, DELIVERED, CANCELLED).
+Design Considerations & Principles to Focus On (Level 2):
+
+Liskov Substitution Principle (LSP): If you introduce hierarchies (e.g., different types of notifications or shipping carriers), ensure that subtypes can be substituted for their base types without altering the correctness of the program.
+Interface Segregation Principle (ISP): Avoid "fat" interfaces. Clients should not be forced to depend on interfaces they don't use. Consider if your interfaces are too broad.
+DRY Principle (Don't Repeat Yourself): Identify and refactor any duplicated code or logic that emerged during Level 1 or when extending for Level 2.
+Refactoring & Reusability: Look for opportunities to refactor your Level 1 code to accommodate the new requirements cleanly, demonstrating good reusability of existing components.
+Continuous Application of All Principles: Ensure that the principles applied in Level 1 (SRP, OCP, DIP, KISS, YAGNI) are still upheld and potentially strengthened in your Level 2 design.
+Deliverables (Level 2):
+
+Updated Java code for the extended e-commerce system.
+A brief README/explanation detailing the changes made from Level 1, how you addressed the new requirements, and specifically how you applied LSP, ISP, and DRY. Also, reflect on how the initial principles (SOLID, KISS, YAGNI) continued to guide your design.
