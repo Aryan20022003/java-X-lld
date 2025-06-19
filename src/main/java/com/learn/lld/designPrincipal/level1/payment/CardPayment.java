@@ -1,7 +1,5 @@
 package com.learn.lld.designPrincipal.level1.payment;
 
-import java.math.BigDecimal;
-
 public class CardPayment implements PaymentInterface {
     private final Card cardDetail;
 
@@ -10,7 +8,7 @@ public class CardPayment implements PaymentInterface {
     }
 
     @Override
-    public String processPayment(BigDecimal amount) {
+    public String processPayment(double amount) {
         return "Card Process done of amount" + amount;
     }
 }
