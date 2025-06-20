@@ -9,12 +9,18 @@ import com.learn.lld.designPrincipal.level1.checkout.CheckoutResponse;
 import com.learn.lld.designPrincipal.level1.payment.Card;
 import com.learn.lld.designPrincipal.level1.payment.CardPayment;
 import com.learn.lld.designPrincipal.level1.payment.PaymentInterface;
+import com.learn.lld.designPrincipal.level2.notification.EmailNotification;
+import com.learn.lld.designPrincipal.level2.notification.NotificationInterface;
+import com.learn.lld.designPrincipal.level2.orderStatus.OrderManager;
 
 public class Ecommerce {
     private final Cart shoppingCart;
+    private final OrderManager orderManagementService;
 
     public Ecommerce() {
         shoppingCart = new Cart();
+        orderManagementService = new OrderManager();
+
     }
 
     public boolean addProduct(Product product, int quantity) {
@@ -43,10 +49,20 @@ public class Ecommerce {
     }
 
     public CheckoutResponse finalCheckoutWithCard(DiscountType type, double discount, Card paymentCard) {
+        // default to 10 if no cost per kg is given . And My understanding main
+        // E-commerce class should not be
+        // concern with cost per Kg while initialization
+        return finalCheckoutWithCard(type, discount, paymentCard, 10);
+    }
+
+    public CheckoutResponse finalCheckoutWithCard(DiscountType type, double discount, Card paymentCard,
+            double costPerKg) {
         if (paymentCard == null) {
             throw new IllegalArgumentException("Payment card cannot be null");
         }
-
+        if (costPerKg <= 0) {
+            throw new IllegalArgumentException("Shipping cost cannot be less than positive value");
+        }
         if (shoppingCart.getProductCart().isEmpty()) {
             throw new IllegalArgumentException("Cannot checkout with empty cart");
         }
@@ -55,12 +71,21 @@ public class Ecommerce {
             double priceToCheckoutWith = calculateFinalPrice(type, discount);
             PaymentInterface pay = new CardPayment(paymentCard);
             String paymentResult = pay.processPayment(priceToCheckoutWith);
+            String transactionId = generateTransactionId();
 
-            return new CheckoutResponse(
+            boolean status = orderManagementService.startShipment(transactionId);
+            if (status == false) {
+                throw new Exception("Error is shipping service");
+            }
+            CheckoutResponse outResponse = new CheckoutResponse(
                     true,
                     paymentResult,
                     priceToCheckoutWith,
-                    generateTransactionId());
+                    transactionId);
+            NotificationInterface ENotification = new EmailNotification("abc@gmail.com", "cdf@gmail.com");
+            ENotification.sendNotification("Thanks you for ordering Your transactionId" + transactionId);
+            return outResponse;
+
         } catch (Exception e) {
             return new CheckoutResponse(
                     false,
