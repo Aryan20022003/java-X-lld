@@ -6,7 +6,7 @@ public class RepoPublisher implements PublishInterface {
     private PublishInterface next;
     private String repoName;
 
-    RepoPublisher(String repoName) {
+    public RepoPublisher(String repoName) {
         this.repoName = repoName;
         next = null;
     }

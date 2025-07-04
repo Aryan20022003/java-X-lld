@@ -21,6 +21,9 @@ public class ValidatorAdaptor implements inputAdapterInterFace {
         } else if (!validator.validator(url)) {
             throw new Error("Invalid url cannot be parsed");
         }
+        if (!validator.validator(url)) {
+            throw new Error("url is not correct as per validator");
+        }
         return parser.process(url);
     }
 }

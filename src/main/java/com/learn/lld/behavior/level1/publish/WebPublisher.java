@@ -6,7 +6,7 @@ public class WebPublisher implements PublishInterface {
     private PublishInterface next;
     private String publishLocUrl;
 
-    WebPublisher(String publishLocUrl) {
+    public WebPublisher(String publishLocUrl) {
         this.publishLocUrl = publishLocUrl;
         next = null;
     }
