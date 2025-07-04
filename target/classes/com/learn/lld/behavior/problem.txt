@@ -1,0 +1,31 @@
+### **Level 1: Document Conversion and Publishing System**
+
+**Problem Statement:**
+Design a system that can convert documents from various input formats (e.g., Markdown, HTML) into different output formats (e.g., PDF, DOCX, Plain Text) and publish them to various platforms (e.g., internal repository, web server). The system should be extensible to support new document formats and publishing destinations without modifying existing code. It should also manage the lifecycle of document processing, from creation to conversion and final publication.
+
+**Core Components/Features to Implement:**
+
+1.  **Document Representation:** A flexible way to represent a document internally, regardless of its original format.
+2.  **Input Adapters:** Components that can read and parse documents from different input formats (e.g., MarkdownReader, HtmlReader).
+3.  **Output Converters:** Components that can transform the internal document representation into various output formats (e.g., PdfConverter, DocxConverter, PlainTextConverter).
+4.  **Publishing Mechanisms:** Components responsible for sending the converted document to different destinations (e.g., RepositoryPublisher, WebPublisher).
+5.  **Workflow Management:** A system to orchestrate the conversion and publishing process, allowing different steps to be executed sequentially or conditionally.
+6.  **Logging:** A simple logging mechanism to record events and errors during the document processing lifecycle.
+
+---
+
+### **Level 2: Advanced Order Fulfillment System with Dynamic Pricing and Notifications**
+
+**Problem Statement:**
+Develop an advanced order fulfillment system for an e-commerce platform. The system should handle various types of orders (e.g., standard, express, international) and apply dynamic pricing rules based on customer loyalty, promotional codes, and shipping options. It must also manage the order's state throughout its lifecycle (e.g., pending, processing, shipped, delivered, cancelled) and notify different stakeholders (customer, warehouse, finance) based on state changes. The system should be highly extensible for new order types, pricing rules, shipping methods, and notification channels.
+
+**Core Components/Features to Implement:**
+
+1.  **Order Management:** Components for creating, retrieving, updating, and deleting orders, encapsulating various order details (items, customer info, shipping address).
+2.  **Product Catalog:** A simplified product catalog with basic product information.
+3.  **Pricing Engine:** A module that calculates the final price of an order, applying discounts, taxes, and shipping costs based on dynamic rules.
+4.  **Shipping Module:** Handles different shipping methods and their associated costs and delivery times.
+5.  **Order State Management:** Logic to transition an order through its various states and enforce valid transitions.
+6.  **Notification Service:** A service that sends notifications to relevant parties about order status changes via different channels (e.g., email, SMS).
+7.  **Payment Gateway Integration (Mock):** A mock integration for processing payments, changing order status upon success or failure.
+
