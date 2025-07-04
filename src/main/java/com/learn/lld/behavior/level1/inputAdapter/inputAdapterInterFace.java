@@ -5,7 +5,6 @@ import com.learn.lld.behavior.level1.document.Document;
 //Implemented chain of responsibility parse->validate->Document will be returned.  
 
 public interface inputAdapterInterFace {
-    public void setNextState(inputAdapterInterFace next);
 
     public Document process(String url);
 }

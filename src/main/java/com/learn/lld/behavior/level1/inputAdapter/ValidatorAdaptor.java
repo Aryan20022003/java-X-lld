@@ -13,11 +13,6 @@ public class ValidatorAdaptor implements inputAdapterInterFace {
     }
 
     @Override
-    public void setNextState(inputAdapterInterFace next) {
-        parser = next;
-    }
-
-    @Override
     public Document process(String url) {
         if (parser == null) {
             throw new IllegalArgumentException("No parser is available");

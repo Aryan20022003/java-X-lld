@@ -13,11 +13,6 @@ public class ParserAdapter implements inputAdapterInterFace {
     }
 
     @Override
-    public void setNextState(inputAdapterInterFace next) {
-        nextState = next;
-    }
-
-    @Override
     public Document process(String url) {
         if (parser == null) {
             throw new IllegalArgumentException("No parser is available");
