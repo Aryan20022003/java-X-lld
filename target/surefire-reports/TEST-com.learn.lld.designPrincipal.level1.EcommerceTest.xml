@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.learn.lld.designPrincipal.level1.EcommerceTest" time="0.044" tests="15" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.learn.lld.designPrincipal.level1.EcommerceTest" time="0.026" tests="15" errors="0" skipped="0" failures="2">
   <properties>
     <property name="java.specification.version" value="24"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,10 +12,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IN"/>
     <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/24.0.1/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/aryan./Code/lld/low_level_design/target/surefire/surefirebooter13303100557776074809.jar /Users/aryan./Code/lld/low_level_design/target/surefire 2025-06-19T20-16-57_920-jvmRun1 surefire15937024737362613576tmp surefire_08973696196941448798tmp"/>
+    <property name="sun.java.command" value="/Users/aryan./Code/lld/low_level_design/target/surefire/surefirebooter899826888536523863.jar /Users/aryan./Code/lld/low_level_design/target/surefire 2025-07-05T13-03-01_984-jvmRun1 surefire9567577926439992502tmp surefire_013353230551616711251tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
-    <property name="test" value="EcommerceTest"/>
     <property name="surefire.test.class.path" value="/Users/aryan./Code/lld/low_level_design/target/test-classes:/Users/aryan./Code/lld/low_level_design/target/classes:/Users/aryan./.m2/repository/junit/junit/4.11/junit-4.11.jar:/Users/aryan./.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/aryan./.m2/repository/org/scala-lang/scala-library/2.13.0/scala-library-2.13.0.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/Users/aryan."/>
@@ -30,7 +29,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/aryan./Code/lld/low_level_design/target/surefire/surefirebooter13303100557776074809.jar"/>
+    <property name="surefire.real.class.path" value="/Users/aryan./Code/lld/low_level_design/target/surefire/surefirebooter899826888536523863.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="24.0.1"/>
@@ -59,19 +58,27 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="68.0"/>
   </properties>
-  <testcase name="testMultipleProductsPrice" classname="com.learn.lld.designPrincipal.level1.EcommerceTest" time="0.004"/>
+  <testcase name="testMultipleProductsPrice" classname="com.learn.lld.designPrincipal.level1.EcommerceTest" time="0"/>
   <testcase name="testFixedDiscountGreaterThanTotal" classname="com.learn.lld.designPrincipal.level1.EcommerceTest" time="0"/>
   <testcase name="testRemoveProduct" classname="com.learn.lld.designPrincipal.level1.EcommerceTest" time="0"/>
   <testcase name="testFixedDiscount" classname="com.learn.lld.designPrincipal.level1.EcommerceTest" time="0"/>
-  <testcase name="testAddProductWithZeroQuantity" classname="com.learn.lld.designPrincipal.level1.EcommerceTest" time="0.001"/>
-  <testcase name="testInvalidPercentageDiscount" classname="com.learn.lld.designPrincipal.level1.EcommerceTest" time="0.001"/>
+  <testcase name="testAddProductWithZeroQuantity" classname="com.learn.lld.designPrincipal.level1.EcommerceTest" time="0"/>
+  <testcase name="testInvalidPercentageDiscount" classname="com.learn.lld.designPrincipal.level1.EcommerceTest" time="0"/>
   <testcase name="testPercentageDiscount" classname="com.learn.lld.designPrincipal.level1.EcommerceTest" time="0"/>
-  <testcase name="testCheckoutWithEmptyCart" classname="com.learn.lld.designPrincipal.level1.EcommerceTest" time="0.001"/>
+  <testcase name="testCheckoutWithEmptyCart" classname="com.learn.lld.designPrincipal.level1.EcommerceTest" time="0"/>
   <testcase name="testAddNullProduct" classname="com.learn.lld.designPrincipal.level1.EcommerceTest" time="0"/>
-  <testcase name="testComplexCheckoutScenario" classname="com.learn.lld.designPrincipal.level1.EcommerceTest" time="0.023"/>
-  <testcase name="testNegativeFixedDiscount" classname="com.learn.lld.designPrincipal.level1.EcommerceTest" time="0"/>
+  <testcase name="testComplexCheckoutScenario" classname="com.learn.lld.designPrincipal.level1.EcommerceTest" time="0.025">
+    <failure type="java.lang.AssertionError">java.lang.AssertionError
+	at com.learn.lld.designPrincipal.level1.EcommerceTest.testComplexCheckoutScenario(EcommerceTest.java:122)
+</failure>
+  </testcase>
+  <testcase name="testNegativeFixedDiscount" classname="com.learn.lld.designPrincipal.level1.EcommerceTest" time="0.001"/>
   <testcase name="testAddProduct" classname="com.learn.lld.designPrincipal.level1.EcommerceTest" time="0"/>
   <testcase name="testAddProductWithNegativeQuantity" classname="com.learn.lld.designPrincipal.level1.EcommerceTest" time="0"/>
   <testcase name="testCheckoutWithNullCard" classname="com.learn.lld.designPrincipal.level1.EcommerceTest" time="0"/>
-  <testcase name="testSuccessfulCheckout" classname="com.learn.lld.designPrincipal.level1.EcommerceTest" time="0"/>
+  <testcase name="testSuccessfulCheckout" classname="com.learn.lld.designPrincipal.level1.EcommerceTest" time="0">
+    <failure type="java.lang.AssertionError">java.lang.AssertionError
+	at com.learn.lld.designPrincipal.level1.EcommerceTest.testSuccessfulCheckout(EcommerceTest.java:83)
+</failure>
+  </testcase>
 </testsuite>

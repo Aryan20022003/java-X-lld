@@ -1,4 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: com.learn.lld.designPrincipal.level1.EcommerceTest
 -------------------------------------------------------------------------------
-Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.044 s - in com.learn.lld.designPrincipal.level1.EcommerceTest
+Tests run: 15, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.026 s <<< FAILURE! - in com.learn.lld.designPrincipal.level1.EcommerceTest
+testComplexCheckoutScenario(com.learn.lld.designPrincipal.level1.EcommerceTest)  Time elapsed: 0.025 s  <<< FAILURE!
+java.lang.AssertionError
+	at com.learn.lld.designPrincipal.level1.EcommerceTest.testComplexCheckoutScenario(EcommerceTest.java:122)
+
+testSuccessfulCheckout(com.learn.lld.designPrincipal.level1.EcommerceTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.AssertionError
+	at com.learn.lld.designPrincipal.level1.EcommerceTest.testSuccessfulCheckout(EcommerceTest.java:83)
+

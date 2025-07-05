@@ -43,4 +43,15 @@ public class AppTest {
         App app = new App();
         assertTrue(app instanceof App);
     }
+
+    @Test
+    public void testMarkdownDocumentWorkflow() {
+        // Simulate Markdown document parsing and publishing
+        String mdUrl = "sample.md";
+        com.learn.lld.behavior.level1.document.Document mdDoc =
+            com.learn.lld.behavior.level1.DocumentParserWorkflow.MarkdownInputParserWorkflow(mdUrl);
+        String mdPublishResult = com.learn.lld.behavior.level1.DocumentPublish.RepoPublish(mdDoc, "repo://markdowns");
+        // Assert that the publish result is not null or empty (basic workflow check)
+        assertTrue(mdPublishResult != null && !mdPublishResult.isEmpty());
+    }
 }

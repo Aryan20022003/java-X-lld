@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.learn.lld.AppTest" time="0.018" tests="12" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.learn.lld.AppTest" time="0.039" tests="4" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="24"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IN"/>
     <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/24.0.1/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/aryan./Code/lld/low_level_design/target/surefire/surefirebooter6674105727495453215.jar /Users/aryan./Code/lld/low_level_design/target/surefire 2025-06-17T10-24-57_061-jvmRun1 surefire11469315770614979824tmp surefire_011670980936120905451tmp"/>
+    <property name="sun.java.command" value="/Users/aryan./Code/lld/low_level_design/target/surefire/surefirebooter899826888536523863.jar /Users/aryan./Code/lld/low_level_design/target/surefire 2025-07-05T13-03-01_984-jvmRun1 surefire9567577926439992502tmp surefire_013353230551616711251tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/aryan./Code/lld/low_level_design/target/test-classes:/Users/aryan./Code/lld/low_level_design/target/classes:/Users/aryan./.m2/repository/junit/junit/4.11/junit-4.11.jar:/Users/aryan./.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/aryan./.m2/repository/org/scala-lang/scala-library/2.13.0/scala-library-2.13.0.jar:"/>
@@ -29,7 +29,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/aryan./Code/lld/low_level_design/target/surefire/surefirebooter6674105727495453215.jar"/>
+    <property name="surefire.real.class.path" value="/Users/aryan./Code/lld/low_level_design/target/surefire/surefirebooter899826888536523863.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="24.0.1"/>
@@ -58,16 +58,8 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="68.0"/>
   </properties>
-  <testcase name="testProductEquals" classname="com.learn.lld.AppTest" time="0.002"/>
-  <testcase name="testRemoveProduct" classname="com.learn.lld.AppTest" time="0.002"/>
-  <testcase name="testTotalPrice" classname="com.learn.lld.AppTest" time="0"/>
+  <testcase name="testMarkdownDocumentWorkflow" classname="com.learn.lld.AppTest" time="0.026"/>
   <testcase name="shouldAnswerWithTrue" classname="com.learn.lld.AppTest" time="0"/>
-  <testcase name="testAddMultipleQuantity" classname="com.learn.lld.AppTest" time="0"/>
   <testcase name="testMainMethod" classname="com.learn.lld.AppTest" time="0"/>
-  <testcase name="testDisplayProduct" classname="com.learn.lld.AppTest" time="0.002"/>
-  <testcase name="testProductHashCode" classname="com.learn.lld.AppTest" time="0"/>
   <testcase name="testAppClassExists" classname="com.learn.lld.AppTest" time="0"/>
-  <testcase name="testAddProduct" classname="com.learn.lld.AppTest" time="0"/>
-  <testcase name="testRemoveNonExistentProduct" classname="com.learn.lld.AppTest" time="0.001"/>
-  <testcase name="testProductCreation" classname="com.learn.lld.AppTest" time="0"/>
 </testsuite>
